@@ -1,9 +1,9 @@
 room_grid = [
-    ['E', 'F', 'L', 'R'],
-    ['E', 'F', 'L', 'R'],
-    ['E', 'F', 'L', 'R'],
-    ['E', 'F', 'L', 'R'],
-    ['E', 'F', 'L', 'R']
+    ['R', 'L', 'F', 'E'],
+    ['R', 'L', 'F', 'E'],
+    ['R', 'L', 'F', 'E'],
+    ['R', 'L', 'F', 'E'],
+    ['R', 'L', 'F', 'E']
 ]
 def available_rooms():
     print("Number of floors: 5")
@@ -14,15 +14,13 @@ def available_rooms():
     print("3. First Class 5000 per night (NON AC)")
     print("4. Economical  3000 per night (NON AC)")
     print("------------------------------------------")
-    print("Room Layout: (E = Economical, F = First Class, L = Luxury, R = Royal, 0 = Occupied)\n")
+    print("Room Layout: (R =  Royal, L = Luxury, F = First Class, E = Economical, 0 = Occupied)\n")
 
     for i in range(5):
         print(f"Floor {i+1}: [ ", end="")
         for j in range(4):
             print(room_grid[i][j], end=" ")
         print("]")
-
-
 def mark_room_as_booked(category):
     for i in range(5):
         for j in range(4):
@@ -147,8 +145,6 @@ def peak_period():
 
         mark_room_as_booked(cat)
         fout.write("---------------------------\n")
-
-
 def couple_pack():
     print("Couple package")
     num = int(input("Enter the category number to check in:\n1. Royal\n2. Luxury\n3. First Class\n4. Economical\n"))
@@ -203,7 +199,6 @@ def main():
             available_rooms()
         elif choice == 2:
             checkin()
-            # peak_period()   # uncomment if needed
         elif choice == 3:
             checkout()
         elif choice == 4:
