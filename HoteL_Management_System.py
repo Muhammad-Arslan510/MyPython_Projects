@@ -97,7 +97,7 @@ def checkout():
                 fout.write("You have checked out\n")
 
                 found = True
-            i += 5  # skip block
+            i += 5  
 
     if not found:
         print("Guest not found with this contact number.")
